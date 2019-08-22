@@ -7,8 +7,10 @@
   </head>
   <body>
     <div id="example"></div>
+    <div id="e1"></div>
     <script type="text/babel">
       var names = ['Alice', 'Emily', 'Kate'];
+      var names1 = ['Jam', 'Tom', 'Alice'];
 
       ReactDOM.render(
         <div>
@@ -19,6 +21,17 @@
         }
         </div>,
         document.getElementById('example')
+      );
+
+      ReactDOM.render(
+        <div>
+        {
+          names1.map(function (name, index) {
+            return <div key={index}>Hello, {name}!</div>
+          })
+        }
+        </div>,
+        document.getElementById('e1')
       );
     </script>
   </body>
